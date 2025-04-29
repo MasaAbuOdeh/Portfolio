@@ -1,0 +1,443 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    color: #000000;
+}
+
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    padding: 20px 10%;
+    background: transparent;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    position: relative;
+    font-size: 25px;
+    color: #050505;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+.navBar a{
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 30px;
+    color: #070707;
+    font-weight: 500;
+    transition: .3s;
+    text-decoration: none;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+
+}
+
+.navBar a:hover{
+    color: #fab82a;
+}
+
+.home{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 70px 10% 0;
+    background: url(portfolio3.jpg);
+    background-size: cover;
+
+
+}
+
+.home-div h3{
+    font-size: 32px;
+    font-weight: 700px;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+
+}
+.home-div h1{
+    font-size: 56px;
+    font-weight: 700px;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+
+}
+.home-div p{
+    font-size: 20px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+.home-div h2{
+    font-size: 35px;
+    font-weight: 400px;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+.highlight {
+    color: #f1aa0f;
+    opacity: 0;
+    animation: slideAndRotate 1s infinite alternate;
+  }
+.home-asci a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #f1aa0f;
+    border-radius: 50%;
+    color: #894c03;
+    font-size:20px;
+    text-decoration: none;
+    margin: 20px 15px 30px 0;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 1s;
+
+}
+
+.home-asci a:hover {
+    background: #f1aa0f;
+    color: #000000;
+    box-shadow: 0px 0px 20px #f1aa0f;
+
+}
+.btn-more {
+    display: inline-block;
+    padding: 20px 50px;
+    border: 2px solid #f1aa0f;
+    border-radius: 40px ;
+    background: #fab82a;
+    color: #000000;
+    font-size:20px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 500;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 1.1s;
+
+}
+.btn-more:hover{
+    box-shadow: 0px 0px 5px #a55d05 ,0px 0px 25px #a55d05,
+    0px 0px 50px #a55d05, 0px 0px 100px #a55d05;
+}
+
+.About{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 150px 20%;
+    background: url(about2.jpeg);
+    background-size: cover;
+}
+
+.About-text {
+    margin-top: 20px;
+    padding-left:500px ;
+
+}
+
+.About-text h1 {
+    font-size: 60px;
+    line-height: 1.4;
+
+}
+
+.About-text h1 span {
+    color: #fab82a;
+
+}
+
+.About-text p {
+    font-size: 20px;
+}
+
+.sub-titel{
+    font-size: 60px;
+    padding-bottom: 70px;
+    margin-left: 50%;
+}
+.sub-titel span{
+    color: #f1aa0f;
+}
+
+.skills {
+    background: url(about1.jpeg);
+}
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container1 {
+    width: 600px;
+    padding: 75px 90px;
+    margin-left: 120px;
+}
+
+.heading1 {
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    margin-bottom: 50px;
+}
+
+.bars{
+    font-size: 25px;
+}
+
+.technical-bars .bars {
+    margin-top: 40px 0px ;
+    padding-bottom: 20px;
+
+}
+
+.technical-bars .bars:first-child{
+    margin-top: 0;
+}
+
+.technical-bars .bars:last-child{
+    margin-bottom: 0;
+}
+
+.technical-bars .bars .info{
+    margin-bottom: 5px;
+}
+
+.technical-bars .bars .info span{
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5 linear forwards;
+    opacity: 0;
+}
+
+.technical-bars .bars .progress-line {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: #000000;
+    overflow: hidden;
+}
+
+.technical-bars .bars .progress-line span {
+    height: 100%;
+    background-color: #f1aa0f;
+    position: absolute;
+    transform: scaleX(0); /* يبدأ مخفي */
+    transform-origin: left;
+    animation: grow 2s ease forwards; /* يحرك الظهور */
+}
+
+/* تحديد النسب النهائية */
+.progress-line span {
+    display: block;
+    height: 100%;
+    width: 0;
+    background: #f1aa0f;
+    border-radius: 6px;
+    transition: width 1s ease;
+}
+
+/* لما تصير active, نغير العرض حسب المهارة */
+.progress-line.html span.active {
+    width: 90%;
+}
+.progress-line.css span.active {
+    width: 85%;
+}
+.progress-line.javaScript span.active {
+    width: 80%;
+}
+.progress-line.React span.active {
+    width: 65%;
+}
+.progress-line.C span.active {
+    width: 70%;
+}
+
+.redial-bars {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.redial-bars .redial-bar{
+    width: 50%;
+    height: 170px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.redial-bars .redial-bar svg{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 120px;
+    height: 160px;
+}
+
+.redial-bars .redial-bar .progress-bars{
+    stroke-width: 10;
+    stroke: black;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate-bar 1s linear forwards;
+}
+
+.path {
+    stroke-width: 10;
+    stroke: #f1aa0f;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 1.5s ease;
+}
+
+/* لما يصير عند الدائرة كلاس active */
+.path1.active {
+    stroke-dashoffset: 50;
+}
+.path2.active {
+    stroke-dashoffset: 175;
+}
+.path3.active {
+    stroke-dashoffset: 125;
+}
+.path4.active {
+    stroke-dashoffset: 75;
+}
+
+@keyframes animatepath1{
+    100%{
+        stroke-dashoffset: 50;;
+    }
+
+}
+
+@keyframes animatepath2{
+    100%{
+        stroke-dashoffset: 135;;
+    }
+
+}
+
+@keyframes animatepath3{
+    100%{
+        stroke-dashoffset: 125;;
+    }
+
+}
+
+@keyframes animatepath4{
+    100%{
+        stroke-dashoffset: 75;;
+    }
+
+}
+@keyframes animate-bar {
+    100%{
+        stroke-dashoffset:-1;
+    }
+}
+
+/* الأنيميشن */
+@keyframes grow {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes showText{
+    100%{
+        opacity: 1;
+    }
+}
+
+
+@keyframes slideRight {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+} 
+
+@keyframes slideTop {
+    0%{
+        transform: translatey(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translatey(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0%{
+        transform: translatey(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translatey(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideAndRotate {
+    0% {
+        opacity: 0;
+      transform: translateX(0) rotate(0deg);
+    }
+    50% {
+        opacity: 1;
+      transform: translateX(30px) rotate(15deg);
+    }
+    100% {
+        opacity: 1;
+      transform: translateX(0) rotate(-15deg);
+    }
+  }
